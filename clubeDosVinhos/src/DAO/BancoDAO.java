@@ -1,6 +1,6 @@
 package DAO;
 
-import Model.Produto;
+import Model.Vinho;
 import java.util.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,7 +11,7 @@ import java.sql.Statement;
 
 public class BancoDAO {
 
-    public static ArrayList<Produto> MinhaLista = new ArrayList<Produto>();
+    public static ArrayList<Vinho> MinhaLista = new ArrayList<Vinho>();
 
     public BancoDAO() {
     }
@@ -21,7 +21,7 @@ public class BancoDAO {
         int maiorID = 0;
         try {
             Statement stmt = this.getConexao().createStatement();
-            ResultSet res = stmt.executeQuery("SELECT MAX(id) id FROM tb_produto");
+            ResultSet res = stmt.executeQuery("SELECT MAX(id) id FROM tb_vinho");
             res.next();
             maiorID = res.getInt("id");
 
@@ -43,7 +43,7 @@ public class BancoDAO {
             Class.forName(driver);
 
             String server = "localhost"; //caminho do MySQL
-            String database = "db_produto";
+            String database = "db_vinho";
             String url = "jdbc:mysql://" + server + ":3306/" + database + "?useTimezone=true&serverTimezone=UTC";
             String user = "root";
             String password = "rootpass";
@@ -74,17 +74,21 @@ public class BancoDAO {
 
         try {
             Statement stmt = this.getConexao().createStatement();
-            ResultSet res = stmt.executeQuery("SELECT * FROM tb_produto");
+            ResultSet res = stmt.executeQuery("SELECT * FROM tb_vinho");
             while (res.next()) {
-
-                String descrição = res.getString("descrição");
-                int quantidade = res.getInt("quantidade");
-                double preço = res.getDouble("preço");
+                
+                
+                String tipo = res.getString("tipo");
+                String regiao = res.getString("região");
                 int id = res.getInt("id");
                 String nome = res.getString("nome");
-                int datacadastro = res.getInt("datacadastro");
+                String descricao = res.getString("descrição");
+                int quant_estoque = res.getInt("quantidade");
+                double preco = res.getDouble("preço");
+                int data_cadastro = res.getInt("datacadastro");
+                String marca = res.getString("marca");
 
-                Produto objeto = new Produto(descrição, quantidade, preço, id, nome, datacadastro);
+                Vinho objeto = new Vinho(tipo,regiao,marca,id,nome,descricao,quant_estoque,preco,data_cadastro);
 
                 MinhaLista.add(objeto);
             }
@@ -97,18 +101,21 @@ public class BancoDAO {
         return MinhaLista;
     }
 
-    public boolean InsertProdutoBD(Produto objeto) {
-        String sql = "INSERT INTO tb_produto(id,nome,datacadastro,descrição,quantidade,preço) VALUES(?,?,?,?,?,?)";
+    public boolean InsertVinhoBD(Vinho objeto) {
+        String sql = "INSERT INTO tb_vinho(id,nome,descricao,quant_estoque,preco,data_cadastro,tipo,regiao,marca) VALUES(?,?,?,?,?,?,?,?,?)";
 
         try {
             PreparedStatement stmt = this.getConexao().prepareStatement(sql);
 
             stmt.setInt(1, objeto.getId());
             stmt.setString(2, objeto.getNome());
-            stmt.setInt(3, objeto.getDatacadastro());
-            stmt.setString(4, objeto.getDescrição());
-            stmt.setInt(5, objeto.getQuantidade());
-            stmt.setDouble(6, objeto.getPreço());
+            stmt.setString(3, objeto.getDescricao());
+            stmt.setInt(4, objeto.getQuant_estoque());
+            stmt.setDouble(5, objeto.getPreco());
+            stmt.setInt(6, objeto.getData_cadastro());
+            stmt.setString(7, objeto.getTipo());
+            stmt.setString(8, objeto.getRegiao());
+            stmt.setString(9, objeto.getMarca());
 
             stmt.execute();
             stmt.close();
@@ -121,10 +128,10 @@ public class BancoDAO {
 
     }
 
-    public boolean DeleteProdutoBD(int id) {
+    public boolean DeleteVinhoBD(int id) {
         try {
             Statement stmt = this.getConexao().createStatement();
-            stmt.executeUpdate("DELETE FROM tb_produto WHERE id = " + id);
+            stmt.executeUpdate("DELETE FROM tb_vinho WHERE id = " + id);
             stmt.close();
 
         } catch (SQLException erro) {
@@ -133,19 +140,22 @@ public class BancoDAO {
         return true;
     }
 
-    public boolean UpdateProdutoBD(Produto objeto) {
+    public boolean UpdateVinhoBD(Vinho objeto) {
 
-        String sql = "UPDATE tb_produto set nome = ? ,datacadastro = ? ,descrição = ? ,quantidade = ? ,preço =? WHERE id = ?";
+        String sql = "UPDATE tb_vinho set nome = ? ,descricao = ? ,quant_estoque = ? ,preco =? ,data_cadastro = ? ,tipo = ? ,regiao = ? ,marca = ? WHERE id = ?";
 
         try {
             PreparedStatement stmt = this.getConexao().prepareStatement(sql);
 
             stmt.setString(1, objeto.getNome());
-            stmt.setInt(2, objeto.getDatacadastro());
-            stmt.setString(3, objeto.getDescrição());
-            stmt.setInt(4, objeto.getQuantidade());
-            stmt.setDouble(5, objeto.getPreço());
-            stmt.setInt(6, objeto.getId());
+            stmt.setString(2, objeto.getDescricao());
+            stmt.setInt(3, objeto.getQuant_estoque());
+            stmt.setDouble(4, objeto.getPreco());
+            stmt.setInt(5, objeto.getData_cadastro());
+            stmt.setString(6, objeto.getTipo());
+            stmt.setString(7, objeto.getRegiao());
+            stmt.setInt(8, objeto.getId());
+            stmt.setString(9, objeto.getMarca());
 
             stmt.execute();
             stmt.close();
@@ -158,22 +168,24 @@ public class BancoDAO {
 
     }
 
-    public Produto carregaProduto(int id) {
+    public Vinho carregaVinho(int id) {
 
-        Produto objeto = new Produto();
+        Vinho objeto = new Vinho();
         objeto.setId(id);
 
         try {
             Statement stmt = this.getConexao().createStatement();
-            ResultSet res = stmt.executeQuery("SELECT * FROM tb_produto WHERE id = " + id);
+            ResultSet res = stmt.executeQuery("SELECT * FROM tb_vinho WHERE id = " + id);
             res.next();
 
             objeto.setNome(res.getString("nome"));
-            objeto.setDatacadastro(res.getInt("data de cadastro"));
-            objeto.setDescrição(res.getString("descrição"));
-            objeto.setQuantidade(res.getInt("quantidade"));
-            objeto.setPreço(res.getDouble("preço"));
-
+            objeto.setDescricao(res.getString("descrição"));
+            objeto.setQuant_estoque(res.getInt("quantidade"));
+            objeto.setPreco(res.getDouble("preço"));
+            objeto.setData_cadastro(res.getInt("data de cadastro"));
+            objeto.setTipo(res.getString("tipo"));
+            objeto.setRegiao(res.getString("região"));
+            objeto.setMarca(res.getString("marca"));
             stmt.close();
 
         } catch (SQLException erro) {
