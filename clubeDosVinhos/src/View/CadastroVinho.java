@@ -5,6 +5,7 @@
 package View;
 
 import Model.Vinho;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class CadastroVinho extends javax.swing.JFrame {
@@ -39,6 +40,7 @@ public class CadastroVinho extends javax.swing.JFrame {
         RegiaoVinho = new javax.swing.JTextField();
         MarcaVinho = new javax.swing.JTextField();
         BotaoConfirma = new javax.swing.JButton();
+        BotaoMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(72, 14, 38));
@@ -71,27 +73,35 @@ public class CadastroVinho extends javax.swing.JFrame {
 
         BotaoConfirma.setText("Cadastrar");
 
+        BotaoMenu.setText("Menu");
+        BotaoMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoMenuActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(132, 132, 132)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(InserirNome)
-                            .addComponent(InserirDesc)
-                            .addComponent(QuantEstoque)
-                            .addComponent(Preco)
-                            .addComponent(DataCadastro)
-                            .addComponent(TipoVinho)
-                            .addComponent(RegiaoVinho)
-                            .addComponent(MarcaVinho, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(283, 283, 283)
-                        .addComponent(BotaoConfirma)))
+                .addGap(132, 132, 132)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(InserirNome)
+                    .addComponent(InserirDesc)
+                    .addComponent(QuantEstoque)
+                    .addComponent(Preco)
+                    .addComponent(DataCadastro)
+                    .addComponent(TipoVinho)
+                    .addComponent(RegiaoVinho)
+                    .addComponent(MarcaVinho, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(132, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BotaoMenu)
+                .addGap(112, 112, 112)
+                .addComponent(BotaoConfirma)
+                .addGap(193, 193, 193))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,9 +122,11 @@ public class CadastroVinho extends javax.swing.JFrame {
                 .addComponent(RegiaoVinho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(MarcaVinho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addComponent(BotaoConfirma)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BotaoConfirma)
+                    .addComponent(BotaoMenu))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -134,6 +146,10 @@ public class CadastroVinho extends javax.swing.JFrame {
     private void InserirNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InserirNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_InserirNomeActionPerformed
+
+    private void BotaoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoMenuActionPerformed
+        //adicionar código pra fechar esse frame e voltar pra tela principal
+    }//GEN-LAST:event_BotaoMenuActionPerformed
 
       private void BotaoConfirmaActionPerformed(java.awt.event.ActionEvent evt) {
         try {
@@ -214,6 +230,7 @@ public class CadastroVinho extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoConfirma;
+    private javax.swing.JButton BotaoMenu;
     private javax.swing.JTextField DataCadastro;
     private javax.swing.JTextField InserirDesc;
     private javax.swing.JTextField InserirNome;

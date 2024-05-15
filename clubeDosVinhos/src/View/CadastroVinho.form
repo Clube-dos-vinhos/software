@@ -53,26 +53,25 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="InserirNome" max="32767" attributes="0"/>
-                              <Component id="InserirDesc" max="32767" attributes="0"/>
-                              <Component id="QuantEstoque" max="32767" attributes="0"/>
-                              <Component id="Preco" max="32767" attributes="0"/>
-                              <Component id="DataCadastro" max="32767" attributes="0"/>
-                              <Component id="TipoVinho" max="32767" attributes="0"/>
-                              <Component id="RegiaoVinho" max="32767" attributes="0"/>
-                              <Component id="MarcaVinho" min="-2" pref="389" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="283" max="-2" attributes="0"/>
-                          <Component id="BotaoConfirma" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="InserirNome" max="32767" attributes="0"/>
+                      <Component id="InserirDesc" max="32767" attributes="0"/>
+                      <Component id="QuantEstoque" max="32767" attributes="0"/>
+                      <Component id="Preco" max="32767" attributes="0"/>
+                      <Component id="DataCadastro" max="32767" attributes="0"/>
+                      <Component id="TipoVinho" max="32767" attributes="0"/>
+                      <Component id="RegiaoVinho" max="32767" attributes="0"/>
+                      <Component id="MarcaVinho" min="-2" pref="389" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="132" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="BotaoMenu" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                  <Component id="BotaoConfirma" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="193" pref="193" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -95,9 +94,12 @@
                   <Component id="RegiaoVinho" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="MarcaVinho" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                  <Component id="BotaoConfirma" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="38" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="BotaoConfirma" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BotaoMenu" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="47" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -153,6 +155,14 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Cadastrar"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="BotaoMenu">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Menu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotaoMenuActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
