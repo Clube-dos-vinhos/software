@@ -4,13 +4,20 @@
  */
 package View;
 
+import Model.Vinho;
+import javax.swing.JOptionPane;
+
 public class CadastroVinho extends javax.swing.JFrame {
 
     /**
      * Creates new form CadastroProduto
      */
+    
+        private Vinho objVinho;
+    
     public CadastroVinho() {
         initComponents();
+        this.objVinho = new Vinho();
     }
 
     /**
@@ -128,6 +135,47 @@ public class CadastroVinho extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_InserirNomeActionPerformed
 
+      private void BotaoConfirmaActionPerformed(java.awt.event.ActionEvent evt) {
+        try {
+            String nome = InserirNome.getText();
+            String descricao = InserirDesc.getText();
+            int quantidadeEstoque = Integer.parseInt(QuantEstoque.getText());
+            double preco = Double.parseDouble(Preco.getText());
+            String dataCadastro = DataCadastro.getText();
+            String tipoVinho = TipoVinho.getText();
+            String regiaoVinho = RegiaoVinho.getText();
+            String marcaVinho = MarcaVinho.getText();
+
+            if (nome.isEmpty() || descricao.isEmpty() || dataCadastro.isEmpty() || tipoVinho.isEmpty() || regiaoVinho.isEmpty() || marcaVinho.isEmpty()) {
+                throw new IllegalArgumentException("Todos os campos devem ser preenchidos.");
+            }
+
+            if (quantidadeEstoque <= 0 || preco <= 0) {
+                throw new IllegalArgumentException("Quantidade em estoque e preço devem ser maiores que zero.");
+            }
+
+            if (this.objVinho.insertVinhoBD(nome, descricao, quantidadeEstoque, preco, dataCadastro, tipoVinho, regiaoVinho, marcaVinho)) {
+                JOptionPane.showMessageDialog(rootPane, "Vinho Cadastrado com Sucesso!");
+
+                // Limpa os campos da interface
+                InserirNome.setText("");
+                InserirDesc.setText("");
+                QuantEstoque.setText("");
+                Preco.setText("");
+                DataCadastro.setText("");
+                TipoVinho.setText("");
+                RegiaoVinho.setText("");
+                MarcaVinho.setText("");
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao cadastrar vinho.");
+            }
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao converter número.");
+        } catch (IllegalArgumentException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage());
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
