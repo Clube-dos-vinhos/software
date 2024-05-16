@@ -7,15 +7,15 @@
       <Color blue="26" green="e" red="48" type="rgb"/>
     </Property>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1920, 1080]"/>
+      <Dimension value="[715, 546]"/>
     </Property>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1920, 1080]"/>
+      <Dimension value="[715, 600]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -32,12 +32,15 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -52,33 +55,41 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="InserirNome" max="32767" attributes="0"/>
-                      <Component id="InserirDesc" max="32767" attributes="0"/>
-                      <Component id="QuantEstoque" max="32767" attributes="0"/>
-                      <Component id="Preco" max="32767" attributes="0"/>
-                      <Component id="DataCadastro" max="32767" attributes="0"/>
-                      <Component id="TipoVinho" max="32767" attributes="0"/>
-                      <Component id="RegiaoVinho" max="32767" attributes="0"/>
-                      <Component id="MarcaVinho" min="-2" pref="389" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="132" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="BotaoMenu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
-                  <Component id="BotaoConfirma" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="193" pref="193" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="InserirNome" max="32767" attributes="0"/>
+                              <Component id="InserirDesc" max="32767" attributes="0"/>
+                              <Component id="QuantEstoque" max="32767" attributes="0"/>
+                              <Component id="Preco" max="32767" attributes="0"/>
+                              <Component id="DataCadastro" max="32767" attributes="0"/>
+                              <Component id="TipoVinho" max="32767" attributes="0"/>
+                              <Component id="RegiaoVinho" max="32767" attributes="0"/>
+                              <Component id="MarcaVinho" min="-2" pref="389" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="BotaoMenu" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                          <Component id="BotaoConfirma" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="217" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                   <Component id="InserirNome" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="InserirDesc" min="-2" max="-2" attributes="0"/>
@@ -94,12 +105,12 @@
                   <Component id="RegiaoVinho" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="MarcaVinho" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="BotaoConfirma" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="BotaoMenu" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="47" max="32767" attributes="0"/>
+                  <EmptySpace pref="56" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -107,6 +118,12 @@
       <SubComponents>
         <Component class="javax.swing.JTextField" name="InserirNome">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="36" green="1f" red="5e" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a9" green="a9" red="a9" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Digite o nome do vinho"/>
             <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
               <Insets value="[3, 6, 2, 6]"/>
@@ -118,51 +135,112 @@
         </Component>
         <Component class="javax.swing.JTextField" name="InserirDesc">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="36" green="1f" red="5e" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a9" green="a9" red="a9" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Descri&#xe7;&#xe3;o do vinho"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="QuantEstoque">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="36" green="1f" red="5e" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a9" green="a9" red="a9" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Quantidade em estoque"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="Preco">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="36" green="1f" red="5e" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a9" green="a9" red="a9" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Pre&#xe7;o do vinho"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="DataCadastro">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="36" green="1f" red="5e" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a9" green="a9" red="a9" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Data de cadastro"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="TipoVinho">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="36" green="1f" red="5e" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a9" green="a9" red="a9" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Tipo de vinho"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="RegiaoVinho">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="36" green="1f" red="5e" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a9" green="a9" red="a9" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Regi&#xe3;o de fabrica&#xe7;&#xe3;o"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="MarcaVinho">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="36" green="1f" red="5e" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a9" green="a9" red="a9" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Marca do vinho"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="BotaoConfirma">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="36" green="1f" red="5e" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a9" green="a9" red="a9" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Cadastrar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="BotaoMenu">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="36" green="1f" red="5e" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a9" green="a9" red="a9" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Menu"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotaoMenuActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/View/header.png"/>
+            </Property>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

@@ -21,30 +21,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
+        jLabel2 = new javax.swing.JLabel();
         BotaoCadastro = new javax.swing.JButton();
         BotaoGerenc = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         BotaoSair = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(72, 14, 38));
 
-        jPanel2.setBackground(new java.awt.Color(85, 31, 54));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/logo cdv branca MENOR.png"))); // NOI18N
-
-        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
-
-        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/headerfinal.png"))); // NOI18N
 
         BotaoCadastro.setBackground(new java.awt.Color(85, 31, 54));
         BotaoCadastro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        BotaoCadastro.setText("Cadastro");
+        BotaoCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imgcadastro.png"))); // NOI18N
         BotaoCadastro.setBorder(null);
         BotaoCadastro.setBorderPainted(false);
         BotaoCadastro.setContentAreaFilled(false);
@@ -57,7 +48,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         BotaoGerenc.setBackground(new java.awt.Color(85, 31, 54));
         BotaoGerenc.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        BotaoGerenc.setText("Gerenciamento");
+        BotaoGerenc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imggerenc.png"))); // NOI18N
         BotaoGerenc.setBorder(null);
         BotaoGerenc.setBorderPainted(false);
         BotaoGerenc.setContentAreaFilled(false);
@@ -67,8 +58,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/logo cdv branca MENOR.png"))); // NOI18N
+
         BotaoSair.setBackground(new java.awt.Color(85, 31, 54));
         BotaoSair.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BotaoSair.setForeground(new java.awt.Color(169, 169, 169));
         BotaoSair.setText("Sair");
         BotaoSair.setBorder(null);
         BotaoSair.setBorderPainted(false);
@@ -80,65 +74,41 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(BotaoCadastro)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BotaoGerenc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jSeparator1)
-                            .addComponent(BotaoSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap())
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(BotaoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotaoGerenc, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
-        );
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/header.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel2)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(328, 328, 328)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(128, 128, 128)
+                        .addComponent(BotaoCadastro)
+                        .addGap(18, 18, 18)
+                        .addComponent(BotaoGerenc, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(314, 314, 314)
+                        .addComponent(BotaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BotaoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotaoGerenc, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(BotaoSair, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,13 +123,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoCadastroActionPerformed
         CadastroVinho objeto = new CadastroVinho();
         objeto.setVisible(true);
-        setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE); /*coloquei esse código pra evitar que feche o software inteiro quando fechar
-        a tela da cadastro, mas não deu em merda nenhuma....... mas eu vou dar um jeito de funcionar confia*/
     }//GEN-LAST:event_BotaoCadastroActionPerformed
 
     private void BotaoGerencActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoGerencActionPerformed
@@ -215,9 +184,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     // End of variables declaration//GEN-END:variables
 }
 
