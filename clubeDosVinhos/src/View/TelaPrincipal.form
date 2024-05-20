@@ -90,7 +90,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/View/headerfinal.png"/>
+              <Image iconType="3" name="/Imagens/headerfinal.png"/>
             </Property>
           </Properties>
         </Component>
@@ -103,7 +103,7 @@
               <Font name="Segoe UI" size="18" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/View/imgcadastro.png"/>
+              <Image iconType="3" name="/Imagens/imgcadastro.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -127,13 +127,16 @@
               <Font name="Segoe UI" size="18" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/View/imggerenc.png"/>
+              <Image iconType="3" name="/Imagens/imggerenc.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotaoGerencActionPerformed"/>
@@ -142,7 +145,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/View/logo cdv branca MENOR.png"/>
+              <Image iconType="3" name="/Imagens/logo cdv branca MENOR.png"/>
             </Property>
           </Properties>
         </Component>

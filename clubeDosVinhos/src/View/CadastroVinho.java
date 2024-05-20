@@ -45,8 +45,8 @@ public class CadastroVinho extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(72, 14, 38));
-        setPreferredSize(new java.awt.Dimension(715, 546));
-        setSize(new java.awt.Dimension(715, 600));
+        setPreferredSize(new java.awt.Dimension(715, 650));
+        setSize(new java.awt.Dimension(715, 650));
 
         jPanel1.setBackground(new java.awt.Color(72, 14, 38));
 
@@ -101,7 +101,7 @@ public class CadastroVinho extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/header.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/header.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -167,7 +167,7 @@ public class CadastroVinho extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 76, Short.MAX_VALUE))
         );
 
         pack();

@@ -1,4 +1,5 @@
 import View.CadastroVinho;
+import View.GerenciaVinho;
 import javax.swing.WindowConstants;
 
 
@@ -31,11 +32,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(72, 14, 38));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/headerfinal.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/headerfinal.png"))); // NOI18N
 
         BotaoCadastro.setBackground(new java.awt.Color(85, 31, 54));
         BotaoCadastro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        BotaoCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imgcadastro.png"))); // NOI18N
+        BotaoCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/imgcadastro.png"))); // NOI18N
         BotaoCadastro.setBorder(null);
         BotaoCadastro.setBorderPainted(false);
         BotaoCadastro.setContentAreaFilled(false);
@@ -48,17 +49,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         BotaoGerenc.setBackground(new java.awt.Color(85, 31, 54));
         BotaoGerenc.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        BotaoGerenc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imggerenc.png"))); // NOI18N
+        BotaoGerenc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/imggerenc.png"))); // NOI18N
         BotaoGerenc.setBorder(null);
         BotaoGerenc.setBorderPainted(false);
         BotaoGerenc.setContentAreaFilled(false);
+        BotaoGerenc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BotaoGerenc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotaoGerencActionPerformed(evt);
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/logo cdv branca MENOR.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logo cdv branca MENOR.png"))); // NOI18N
 
         BotaoSair.setBackground(new java.awt.Color(85, 31, 54));
         BotaoSair.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -132,7 +134,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoCadastroActionPerformed
 
     private void BotaoGerencActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoGerencActionPerformed
-        // TODO add your handling code here:
+        GerenciaVinho objeto2 = new GerenciaVinho();
+        objeto2.setVisible(true);
     }//GEN-LAST:event_BotaoGerencActionPerformed
 
     private void BotaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSairActionPerformed
