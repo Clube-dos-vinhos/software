@@ -1,3 +1,5 @@
+package View;
+
 import View.CadastroVinho;
 import View.GerenciaVinho;
 import javax.swing.WindowConstants;
