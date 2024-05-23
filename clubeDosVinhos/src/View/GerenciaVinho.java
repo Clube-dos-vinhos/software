@@ -50,7 +50,6 @@ public class GerenciaVinho extends javax.swing.JFrame {
         gcancelar = new javax.swing.JButton();
         galterar = new javax.swing.JButton();
         gapagar = new javax.swing.JButton();
-        BotaoMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(72, 14, 38));
@@ -64,7 +63,7 @@ public class GerenciaVinho extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(1080, 720));
         jPanel1.setLayout(null);
 
-        ClubeDosCinco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/clube dos cinco.png"))); // NOI18N
+        ClubeDosCinco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/clube dos cinco.png"))); // NOI18N
         ClubeDosCinco.setMaximumSize(new java.awt.Dimension(1080, 720));
         ClubeDosCinco.setMinimumSize(new java.awt.Dimension(1080, 720));
         ClubeDosCinco.setPreferredSize(new java.awt.Dimension(1080, 720));
@@ -85,7 +84,7 @@ public class GerenciaVinho extends javax.swing.JFrame {
         jPanel1.add(gpesquisa);
         gpesquisa.setBounds(90, 30, 500, 33);
 
-        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logoclubedoscinco.png"))); // NOI18N
+        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/logoclubedoscinco.png"))); // NOI18N
         jPanel1.add(Logo);
         Logo.setBounds(830, 360, 230, 350);
 
@@ -243,17 +242,6 @@ public class GerenciaVinho extends javax.swing.JFrame {
         });
         jPanel1.add(gapagar);
         gapagar.setBounds(690, 590, 90, 23);
-
-        BotaoMenu.setBackground(new java.awt.Color(94, 31, 54));
-        BotaoMenu.setForeground(new java.awt.Color(169, 169, 169));
-        BotaoMenu.setText("Voltar ao menu");
-        BotaoMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoMenuActionPerformed(evt);
-            }
-        });
-        jPanel1.add(BotaoMenu);
-        BotaoMenu.setBounds(550, 690, 120, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -448,10 +436,6 @@ public class GerenciaVinho extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_gdescricaoActionPerformed
 
-    private void BotaoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoMenuActionPerformed
-        super.dispose();
-    }//GEN-LAST:event_BotaoMenuActionPerformed
-
     @SuppressWarnings("unchecked")
     public void carregaTabela() {
 
@@ -509,7 +493,6 @@ public class GerenciaVinho extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotaoMenu;
     private javax.swing.JLabel ClubeDosCinco;
     private javax.swing.JLabel Logo;
     private javax.swing.JButton galterar;
