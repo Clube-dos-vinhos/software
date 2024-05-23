@@ -46,7 +46,7 @@ public class BancoDAO {
             String database = "db_vinho";
             String url = "jdbc:mysql://" + server + ":3306/" + database + "?useTimezone=true&serverTimezone=UTC";
             String user = "root";
-            String password = "rootpass";
+            String password = "rootpass01!";
 
             connection = DriverManager.getConnection(url, user, password);
 
@@ -74,18 +74,18 @@ public class BancoDAO {
 
         try {
             Statement stmt = this.getConexao().createStatement();
-            ResultSet res = stmt.executeQuery("SELECT * FROM tb_vinho");
+            ResultSet res = stmt.executeQuery("SELECT tipo, regiao, id, nome, descricao, quant_estoque,preco, data_cadastro,marca  FROM tb_vinho");
             while (res.next()) {
                 
                 
                 String tipo = res.getString("tipo");
-                String regiao = res.getString("região");
+                String regiao = res.getString("regiao");
                 int id = res.getInt("id");
                 String nome = res.getString("nome");
-                String descricao = res.getString("descrição");
-                int quant_estoque = res.getInt("quantidade");
-                double preco = res.getDouble("preço");
-                int data_cadastro = res.getInt("datacadastro");
+                String descricao = res.getString("descricao");
+                int quant_estoque = res.getInt("quant_estoque");
+                double preco = res.getDouble("preco");
+                String data_cadastro = res.getString("data_cadastro");
                 String marca = res.getString("marca");
 
                 Vinho objeto = new Vinho(tipo,regiao,marca,id,nome,descricao,quant_estoque,preco,data_cadastro);
@@ -94,6 +94,7 @@ public class BancoDAO {
             }
 
             stmt.close();
+            System.out.println("aqui:"+MinhaLista);
 
         } catch (SQLException ex) {
         }
@@ -112,7 +113,7 @@ public class BancoDAO {
             stmt.setString(3, objeto.getDescricao());
             stmt.setInt(4, objeto.getQuant_estoque());
             stmt.setDouble(5, objeto.getPreco());
-            stmt.setInt(6, objeto.getData_cadastro());
+            stmt.setString(6, objeto.getData_cadastro());
             stmt.setString(7, objeto.getTipo());
             stmt.setString(8, objeto.getRegiao());
             stmt.setString(9, objeto.getMarca());
@@ -151,11 +152,12 @@ public class BancoDAO {
             stmt.setString(2, objeto.getDescricao());
             stmt.setInt(3, objeto.getQuant_estoque());
             stmt.setDouble(4, objeto.getPreco());
-            stmt.setInt(5, objeto.getData_cadastro());
+            stmt.setString(5, objeto.getData_cadastro());
             stmt.setString(6, objeto.getTipo());
             stmt.setString(7, objeto.getRegiao());
-            stmt.setInt(8, objeto.getId());
-            stmt.setString(9, objeto.getMarca());
+            stmt.setString(8, objeto.getMarca());
+            stmt.setInt(9, objeto.getId());
+           
 
             stmt.execute();
             stmt.close();
@@ -179,12 +181,12 @@ public class BancoDAO {
             res.next();
 
             objeto.setNome(res.getString("nome"));
-            objeto.setDescricao(res.getString("descrição"));
-            objeto.setQuant_estoque(res.getInt("quantidade"));
-            objeto.setPreco(res.getDouble("preço"));
-            objeto.setData_cadastro(res.getInt("data de cadastro"));
+            objeto.setDescricao(res.getString("descricao"));
+            objeto.setQuant_estoque(res.getInt("quant_estoque"));
+            objeto.setPreco(res.getDouble("preco"));
+            objeto.setData_cadastro(res.getString("data_cadastro"));
             objeto.setTipo(res.getString("tipo"));
-            objeto.setRegiao(res.getString("região"));
+            objeto.setRegiao(res.getString("regiao"));
             objeto.setMarca(res.getString("marca"));
             stmt.close();
 

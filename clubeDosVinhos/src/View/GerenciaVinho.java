@@ -50,6 +50,7 @@ public class GerenciaVinho extends javax.swing.JFrame {
         gcancelar = new javax.swing.JButton();
         galterar = new javax.swing.JButton();
         gapagar = new javax.swing.JButton();
+        BotaoMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(72, 14, 38));
@@ -63,32 +64,38 @@ public class GerenciaVinho extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(1080, 720));
         jPanel1.setLayout(null);
 
-        ClubeDosCinco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/clube dos cinco.png"))); // NOI18N
+        ClubeDosCinco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/clube dos cinco.png"))); // NOI18N
         ClubeDosCinco.setMaximumSize(new java.awt.Dimension(1080, 720));
         ClubeDosCinco.setMinimumSize(new java.awt.Dimension(1080, 720));
         ClubeDosCinco.setPreferredSize(new java.awt.Dimension(1080, 720));
         jPanel1.add(ClubeDosCinco);
         ClubeDosCinco.setBounds(530, 10, 530, 70);
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Pesquisar:");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(30, 40, 70, 16);
 
         gpesquisa.setBackground(new java.awt.Color(85, 31, 54));
+        gpesquisa.setForeground(new java.awt.Color(169, 169, 169));
+        gpesquisa.setCaretColor(new java.awt.Color(255, 255, 255));
+        gpesquisa.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         gpesquisa.setPreferredSize(new java.awt.Dimension(200, 50));
+        gpesquisa.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         gpesquisa.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 gpesquisaKeyReleased(evt);
             }
         });
         jPanel1.add(gpesquisa);
-        gpesquisa.setBounds(90, 30, 500, 33);
+        gpesquisa.setBounds(100, 30, 490, 33);
 
-        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/logoclubedoscinco.png"))); // NOI18N
+        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logoclubedoscinco.png"))); // NOI18N
         jPanel1.add(Logo);
         Logo.setBounds(830, 360, 230, 350);
 
         gtable.setBackground(new java.awt.Color(85, 31, 54));
+        gtable.setForeground(new java.awt.Color(255, 255, 255));
         gtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
@@ -114,8 +121,9 @@ public class GerenciaVinho extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        gtable.setGridColor(new java.awt.Color(85, 31, 54));
-        gtable.setSelectionBackground(new java.awt.Color(85, 31, 54));
+        gtable.setGridColor(new java.awt.Color(255, 255, 255));
+        gtable.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        gtable.setSelectionForeground(new java.awt.Color(85, 31, 54));
         gtable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 gtableMouseClicked(evt);
@@ -137,78 +145,118 @@ public class GerenciaVinho extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(20, 90, 1040, 240);
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nome:");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(30, 370, 36, 16);
 
         gdescricao.setBackground(new java.awt.Color(85, 31, 54));
+        gdescricao.setForeground(new java.awt.Color(169, 169, 169));
+        gdescricao.setCaretColor(new java.awt.Color(255, 255, 255));
+        gdescricao.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         gdescricao.setMinimumSize(new java.awt.Dimension(0, 0));
         gdescricao.setPreferredSize(new java.awt.Dimension(115, 32));
+        gdescricao.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         gdescricao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gdescricaoActionPerformed(evt);
             }
         });
         jPanel1.add(gdescricao);
-        gdescricao.setBounds(90, 400, 540, 32);
+        gdescricao.setBounds(170, 400, 460, 32);
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Descrição:");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(30, 410, 80, 16);
 
         gnome.setBackground(new java.awt.Color(85, 31, 54));
+        gnome.setForeground(new java.awt.Color(169, 169, 169));
+        gnome.setCaretColor(new java.awt.Color(255, 255, 255));
+        gnome.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         gnome.setMinimumSize(new java.awt.Dimension(0, 0));
         gnome.setPreferredSize(new java.awt.Dimension(115, 32));
+        gnome.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jPanel1.add(gnome);
-        gnome.setBounds(70, 360, 560, 32);
+        gnome.setBounds(170, 360, 460, 32);
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Quantidade em Estoque:");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(30, 450, 140, 16);
 
         gestoque.setBackground(new java.awt.Color(85, 31, 54));
+        gestoque.setForeground(new java.awt.Color(169, 169, 169));
+        gestoque.setCaretColor(new java.awt.Color(255, 255, 255));
+        gestoque.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        gestoque.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jPanel1.add(gestoque);
         gestoque.setBounds(170, 440, 460, 32);
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Preço:");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(30, 490, 37, 16);
 
         gpreco.setBackground(new java.awt.Color(85, 31, 54));
+        gpreco.setForeground(new java.awt.Color(169, 169, 169));
+        gpreco.setCaretColor(new java.awt.Color(255, 255, 255));
+        gpreco.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        gpreco.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jPanel1.add(gpreco);
-        gpreco.setBounds(70, 480, 560, 32);
+        gpreco.setBounds(170, 480, 460, 32);
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Data de Cadastro:");
         jPanel1.add(jLabel7);
         jLabel7.setBounds(30, 530, 110, 16);
 
         gcadastro.setBackground(new java.awt.Color(85, 31, 54));
+        gcadastro.setForeground(new java.awt.Color(169, 169, 169));
+        gcadastro.setCaretColor(new java.awt.Color(255, 255, 255));
+        gcadastro.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        gcadastro.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jPanel1.add(gcadastro);
-        gcadastro.setBounds(130, 520, 500, 32);
+        gcadastro.setBounds(170, 520, 460, 32);
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Tipo:");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(30, 570, 26, 16);
+        jLabel8.setBounds(30, 570, 40, 16);
 
         gtipo.setBackground(new java.awt.Color(85, 31, 54));
+        gtipo.setForeground(new java.awt.Color(169, 169, 169));
+        gtipo.setCaretColor(new java.awt.Color(255, 255, 255));
+        gtipo.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        gtipo.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jPanel1.add(gtipo);
-        gtipo.setBounds(70, 560, 560, 32);
+        gtipo.setBounds(170, 560, 460, 32);
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Região:");
         jPanel1.add(jLabel9);
         jLabel9.setBounds(30, 610, 60, 16);
 
         gregiao.setBackground(new java.awt.Color(85, 31, 54));
+        gregiao.setForeground(new java.awt.Color(169, 169, 169));
+        gregiao.setCaretColor(new java.awt.Color(255, 255, 255));
+        gregiao.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        gregiao.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jPanel1.add(gregiao);
-        gregiao.setBounds(80, 600, 550, 32);
+        gregiao.setBounds(170, 600, 460, 32);
 
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Marca:");
         jPanel1.add(jLabel10);
         jLabel10.setBounds(30, 650, 43, 16);
 
         gmarca.setBackground(new java.awt.Color(85, 31, 54));
+        gmarca.setForeground(new java.awt.Color(169, 169, 169));
+        gmarca.setCaretColor(new java.awt.Color(255, 255, 255));
+        gmarca.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        gmarca.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jPanel1.add(gmarca);
-        gmarca.setBounds(70, 640, 560, 33);
+        gmarca.setBounds(170, 640, 460, 33);
 
         gcancelar.setBackground(new java.awt.Color(169, 169, 169));
         gcancelar.setForeground(new java.awt.Color(72, 14, 38));
@@ -243,6 +291,17 @@ public class GerenciaVinho extends javax.swing.JFrame {
         jPanel1.add(gapagar);
         gapagar.setBounds(690, 590, 90, 23);
 
+        BotaoMenu.setBackground(new java.awt.Color(94, 31, 54));
+        BotaoMenu.setForeground(new java.awt.Color(169, 169, 169));
+        BotaoMenu.setText("Voltar ao menu");
+        BotaoMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoMenuActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BotaoMenu);
+        BotaoMenu.setBounds(550, 690, 120, 23);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -270,7 +329,7 @@ public class GerenciaVinho extends javax.swing.JFrame {
             String descricao = "";
             int quant_estoque = 0;
             double preco = 0.0;
-            int data_cadastro = 0;
+            String data_cadastro = "";
             String tipo = "";
             String regiao = "";
             String marca = "";
@@ -299,10 +358,10 @@ public class GerenciaVinho extends javax.swing.JFrame {
                 preco = Double.parseDouble(this.gpreco.getText());
             }
 
-            if (this.gcadastro.getText().length() < 0) {
+            if (this.gcadastro.getText().length() < 2) {
                 throw new Mensagens("Data de Cadastro deve conter uma data.");
             } else {
-                data_cadastro = Integer.parseInt(this.gcadastro.getText());
+                data_cadastro = this.gcadastro.getText();
             }
 
             if (this.gtipo.getText().length() < 2) {
@@ -327,19 +386,6 @@ public class GerenciaVinho extends javax.swing.JFrame {
                 throw new Mensagens("Primeiro selecione um vinho para alterar.");
             } else {
                 id = Integer.parseInt(this.gtable.getValueAt(this.gtable.getSelectedRow(), 0).toString());
-
-                ArrayList<Vinho> minhalista = new ArrayList<>();
-                minhalista = objVinho.getMinhaLista();
-                boolean flag = false;
-                for (Vinho v : minhalista) {
-                    if (nome.equals(v.getNome())) {
-                        flag = true;
-                    }
-                }
-                if (flag == true) {
-                    throw new Mensagens("Vinho Existente");
-
-                }
             }
 
             if (this.objVinho.UpdateVinhoBD(tipo, regiao, marca, id, nome, descricao, quant_estoque, preco, data_cadastro)) {
@@ -436,6 +482,10 @@ public class GerenciaVinho extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_gdescricaoActionPerformed
 
+    private void BotaoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoMenuActionPerformed
+        super.dispose();
+    }//GEN-LAST:event_BotaoMenuActionPerformed
+
     @SuppressWarnings("unchecked")
     public void carregaTabela() {
 
@@ -455,7 +505,7 @@ public class GerenciaVinho extends javax.swing.JFrame {
                 v.getData_cadastro(),
                 v.getTipo(),
                 v.getRegiao(),
-                v.getMarca(),});
+                v.getMarca()});
         }
     }
 
@@ -493,6 +543,7 @@ public class GerenciaVinho extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaoMenu;
     private javax.swing.JLabel ClubeDosCinco;
     private javax.swing.JLabel Logo;
     private javax.swing.JButton galterar;

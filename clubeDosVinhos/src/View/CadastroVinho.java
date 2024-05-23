@@ -1,18 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package View;
 
 import Model.Vinho;
+import java.sql.SQLException;
 import javax.swing.JFrame;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class CadastroVinho extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CadastroProduto
-     */
+
     
         private Vinho objVinho;
     
@@ -42,6 +41,14 @@ public class CadastroVinho extends javax.swing.JFrame {
         BotaoConfirma = new javax.swing.JButton();
         BotaoMenu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(72, 14, 38));
@@ -52,7 +59,6 @@ public class CadastroVinho extends javax.swing.JFrame {
 
         InserirNome.setBackground(new java.awt.Color(94, 31, 54));
         InserirNome.setForeground(new java.awt.Color(169, 169, 169));
-        InserirNome.setText("Digite o nome do vinho");
         InserirNome.setMargin(new java.awt.Insets(3, 6, 2, 6));
         InserirNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,35 +68,33 @@ public class CadastroVinho extends javax.swing.JFrame {
 
         InserirDesc.setBackground(new java.awt.Color(94, 31, 54));
         InserirDesc.setForeground(new java.awt.Color(169, 169, 169));
-        InserirDesc.setText("Descrição do vinho");
 
         QuantEstoque.setBackground(new java.awt.Color(94, 31, 54));
         QuantEstoque.setForeground(new java.awt.Color(169, 169, 169));
-        QuantEstoque.setText("Quantidade em estoque");
 
         Preco.setBackground(new java.awt.Color(94, 31, 54));
         Preco.setForeground(new java.awt.Color(169, 169, 169));
-        Preco.setText("Preço do vinho");
 
         DataCadastro.setBackground(new java.awt.Color(94, 31, 54));
         DataCadastro.setForeground(new java.awt.Color(169, 169, 169));
-        DataCadastro.setText("Data de cadastro");
 
         TipoVinho.setBackground(new java.awt.Color(94, 31, 54));
         TipoVinho.setForeground(new java.awt.Color(169, 169, 169));
-        TipoVinho.setText("Tipo de vinho");
 
         RegiaoVinho.setBackground(new java.awt.Color(94, 31, 54));
         RegiaoVinho.setForeground(new java.awt.Color(169, 169, 169));
-        RegiaoVinho.setText("Região de fabricação");
 
         MarcaVinho.setBackground(new java.awt.Color(94, 31, 54));
         MarcaVinho.setForeground(new java.awt.Color(169, 169, 169));
-        MarcaVinho.setText("Marca do vinho");
 
         BotaoConfirma.setBackground(new java.awt.Color(94, 31, 54));
         BotaoConfirma.setForeground(new java.awt.Color(169, 169, 169));
         BotaoConfirma.setText("Cadastrar");
+        BotaoConfirma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoConfirmaActionPerformed(evt);
+            }
+        });
 
         BotaoMenu.setBackground(new java.awt.Color(94, 31, 54));
         BotaoMenu.setForeground(new java.awt.Color(169, 169, 169));
@@ -103,6 +107,30 @@ public class CadastroVinho extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/header.png"))); // NOI18N
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Nome do vinho :");
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Descrição do vinho :");
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Quantidade em estoque :");
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Preço do vinho :");
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Data de cadastro :");
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Tipo do vinho :");
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Região de fabricação :");
+
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Marca do vinho :");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -112,44 +140,70 @@ public class CadastroVinho extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BotaoMenu)
+                .addGap(112, 112, 112)
+                .addComponent(BotaoConfirma)
+                .addGap(217, 217, 217))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(InserirNome)
-                            .addComponent(InserirDesc)
-                            .addComponent(QuantEstoque)
-                            .addComponent(Preco)
-                            .addComponent(DataCadastro)
-                            .addComponent(TipoVinho)
-                            .addComponent(RegiaoVinho)
-                            .addComponent(MarcaVinho, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(156, 156, 156))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(BotaoMenu)
-                        .addGap(112, 112, 112)
-                        .addComponent(BotaoConfirma)
-                        .addGap(217, 217, 217))))
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(InserirDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(InserirNome, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QuantEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Preco, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TipoVinho, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegiaoVinho, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MarcaVinho, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(46, 46, 46)
-                .addComponent(InserirNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(46, 46, 46)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(InserirNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(InserirDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(QuantEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Preco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(DataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(TipoVinho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))
+                        .addGap(18, 18, 18)
+                        .addComponent(RegiaoVinho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel8))
                 .addGap(18, 18, 18)
-                .addComponent(InserirDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(QuantEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Preco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(DataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(TipoVinho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(RegiaoVinho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(MarcaVinho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MarcaVinho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BotaoConfirma)
@@ -182,46 +236,98 @@ public class CadastroVinho extends javax.swing.JFrame {
         super.dispose();
     }//GEN-LAST:event_BotaoMenuActionPerformed
 
-      private void BotaoConfirmaActionPerformed(java.awt.event.ActionEvent evt) {
-        try {
-            String nome = InserirNome.getText();
-            String descricao = InserirDesc.getText();
-            int quantidadeEstoque = Integer.parseInt(QuantEstoque.getText());
-            double preco = Double.parseDouble(Preco.getText());
-            String dataCadastro = DataCadastro.getText();
-            String tipoVinho = TipoVinho.getText();
-            String regiaoVinho = RegiaoVinho.getText();
-            String marcaVinho = MarcaVinho.getText();
+    private void BotaoConfirmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoConfirmaActionPerformed
+            try {
+            String nome = "";
+            String descricao = "";
+            int quant_estoque = 0;
+            double preco = 0.0;
+            String data_cadastro = "";
+            String tipo = "";
+            String regiao = "";
+            String marca = "";
 
-            if (nome.isEmpty() || descricao.isEmpty() || dataCadastro.isEmpty() || tipoVinho.isEmpty() || regiaoVinho.isEmpty() || marcaVinho.isEmpty()) {
-                throw new IllegalArgumentException("Todos os campos devem ser preenchidos.");
+            if (this.InserirNome.getText().length() < 2) {
+                throw new Mensagens("Nome deve conter ao menos 2 caracteres.");
+            } else {
+                nome = this.InserirNome.getText();
             }
-
-            if (quantidadeEstoque <= 0 || preco <= 0) {
-                throw new IllegalArgumentException("Quantidade em estoque e preço devem ser maiores que zero.");
+            if (this.InserirDesc.getText().length() < 2) {
+                throw new Mensagens("Descrição deve conter ao menos 2 caracteres.");
+            } else {
+                descricao = this.InserirDesc.getText();
             }
+            if (this.QuantEstoque.getText().length() <=0) {
+                throw new Mensagens("Qauntidade em estoque deve ser número e maior que zero.");
+            } else {
+                quant_estoque = Integer.parseInt(this.QuantEstoque.getText());
+            }
+            if (this.Preco.getText().length()<=0.0) {
+                throw new Mensagens("Preço deve ser número e maior que zero.");
+            } else {
+                preco = Double.parseDouble(this.Preco.getText());
+            }
+            if (this.DataCadastro.getText().length() < 2) {
+                throw new Mensagens("Data de Cadastro deve conter uma data.");
+            } else {
+                data_cadastro = this.DataCadastro.getText();
+            }
+            if (this.TipoVinho.getText().length() < 2) {
+                throw new Mensagens("Tipo deve conter ao menos 2 caracteres.");
+            } else {
+                tipo = this.TipoVinho.getText();
+            }
+            if (this.RegiaoVinho.getText().length() < 2) {
+                throw new Mensagens("Região deve conter ao menos 2 caracteres.");
+            } else {
+                regiao = this.RegiaoVinho.getText();
+            }
+            if (this.MarcaVinho.getText().length() < 2) {
+                throw new Mensagens("Marca deve conter ao menos 2 caracteres.");
+            } else {
+               marca = this.MarcaVinho.getText();
+            }
+            ArrayList<Vinho> minhalista = new ArrayList<>();
+                minhalista = objVinho.getMinhaLista();
+                boolean flag = false;
+                for(Vinho v : minhalista){
+                    if(nome.equals(v.getNome())){
+                        flag = true;
+                        }
+                    }
+                if(flag == true){throw new Mensagens("Vinho Existente");
+                    
+                }
+            
 
-            if (this.objVinho.insertVinhoBD(nome, descricao, quantidadeEstoque, preco, dataCadastro, tipoVinho, regiaoVinho, marcaVinho)) {
+            if (this.objVinho.InsertVinhoBD(tipo, regiao, marca, nome, descricao, quant_estoque, preco, data_cadastro)) {
                 JOptionPane.showMessageDialog(rootPane, "Vinho Cadastrado com Sucesso!");
 
                 // Limpa os campos da interface
-                InserirNome.setText("");
-                InserirDesc.setText("");
-                QuantEstoque.setText("");
-                Preco.setText("");
-                DataCadastro.setText("");
-                TipoVinho.setText("");
-                RegiaoVinho.setText("");
-                MarcaVinho.setText("");
-            } else {
-                JOptionPane.showMessageDialog(rootPane, "Erro ao cadastrar vinho.");
-            }
+                this.InserirNome.setText("");
+                this.InserirDesc.setText("");
+                this.QuantEstoque.setText("");
+                this.Preco.setText("");
+                this.DataCadastro.setText("");
+                this.TipoVinho.setText("");
+                this.RegiaoVinho.setText("");
+                this.MarcaVinho.setText("");
+            } 
+                System.out.println(this.objVinho.getMinhaLista().toString());
+
+        } catch (Mensagens erro) {
+            JOptionPane.showMessageDialog(null, erro.getMessage());   
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao converter número.");
         } catch (IllegalArgumentException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage());
-        }
+        } catch (SQLException ex) {
+            Logger.getLogger(CadastroVinho.class.getName()).log(Level.SEVERE, null, ex);
     }
+      
+    }//GEN-LAST:event_BotaoConfirmaActionPerformed
+
+    
     
     /**
      * @param args the command line arguments
@@ -271,6 +377,14 @@ public class CadastroVinho extends javax.swing.JFrame {
     private javax.swing.JTextField RegiaoVinho;
     private javax.swing.JTextField TipoVinho;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

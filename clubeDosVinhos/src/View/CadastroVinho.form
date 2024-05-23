@@ -61,50 +61,84 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="BotaoMenu" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                  <Component id="BotaoConfirma" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="217" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="InserirNome" max="32767" attributes="0"/>
-                              <Component id="InserirDesc" max="32767" attributes="0"/>
-                              <Component id="QuantEstoque" max="32767" attributes="0"/>
-                              <Component id="Preco" max="32767" attributes="0"/>
-                              <Component id="DataCadastro" max="32767" attributes="0"/>
-                              <Component id="TipoVinho" max="32767" attributes="0"/>
-                              <Component id="RegiaoVinho" max="32767" attributes="0"/>
-                              <Component id="MarcaVinho" min="-2" pref="389" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="BotaoMenu" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
-                          <Component id="BotaoConfirma" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="217" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jLabel8" min="-2" pref="124" max="-2" attributes="0"/>
+                      <Component id="jLabel9" alignment="0" min="-2" pref="114" max="-2" attributes="0"/>
+                      <Component id="jLabel7" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                      <Component id="jLabel6" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                      <Component id="jLabel5" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" pref="144" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="InserirDesc" min="-2" pref="389" max="-2" attributes="0"/>
+                      <Component id="InserirNome" min="-2" pref="389" max="-2" attributes="0"/>
+                      <Component id="QuantEstoque" alignment="1" min="-2" pref="389" max="-2" attributes="0"/>
+                      <Component id="Preco" alignment="1" min="-2" pref="389" max="-2" attributes="0"/>
+                      <Component id="DataCadastro" alignment="1" min="-2" pref="389" max="-2" attributes="0"/>
+                      <Component id="TipoVinho" alignment="1" min="-2" pref="389" max="-2" attributes="0"/>
+                      <Component id="RegiaoVinho" alignment="1" min="-2" pref="389" max="-2" attributes="0"/>
+                      <Component id="MarcaVinho" min="-2" pref="389" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                  <Component id="InserirNome" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="InserirNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="InserirDesc" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="QuantEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="Preco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="DataCadastro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="TipoVinho" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="RegiaoVinho" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="InserirDesc" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="QuantEstoque" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="Preco" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="DataCadastro" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="TipoVinho" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="RegiaoVinho" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="MarcaVinho" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="MarcaVinho" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="BotaoConfirma" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -124,7 +158,6 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a9" green="a9" red="a9" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Digite o nome do vinho"/>
             <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
               <Insets value="[3, 6, 2, 6]"/>
             </Property>
@@ -141,7 +174,6 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a9" green="a9" red="a9" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Descri&#xe7;&#xe3;o do vinho"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="QuantEstoque">
@@ -152,7 +184,6 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a9" green="a9" red="a9" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Quantidade em estoque"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="Preco">
@@ -163,7 +194,6 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a9" green="a9" red="a9" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Pre&#xe7;o do vinho"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="DataCadastro">
@@ -174,7 +204,6 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a9" green="a9" red="a9" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Data de cadastro"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="TipoVinho">
@@ -185,7 +214,6 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a9" green="a9" red="a9" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Tipo de vinho"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="RegiaoVinho">
@@ -196,7 +224,6 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a9" green="a9" red="a9" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Regi&#xe3;o de fabrica&#xe7;&#xe3;o"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="MarcaVinho">
@@ -207,7 +234,6 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a9" green="a9" red="a9" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Marca do vinho"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="BotaoConfirma">
@@ -220,6 +246,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Cadastrar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotaoConfirmaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BotaoMenu">
           <Properties>
@@ -240,6 +269,70 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Imagens/header.png"/>
             </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Nome do vinho :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Descri&#xe7;&#xe3;o do vinho :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Quantidade em estoque :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Pre&#xe7;o do vinho :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel6">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Data de cadastro :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel7">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Tipo do vinho :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel8">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Regi&#xe3;o de fabrica&#xe7;&#xe3;o :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel9">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Marca do vinho :"/>
           </Properties>
         </Component>
       </SubComponents>
