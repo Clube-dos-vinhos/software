@@ -1,0 +1,27 @@
+Create table:
+
+CREATE TABLE IF NOT EXISTS `db_vinho`.`tb_vinho` (
+  `id` INT NOT NULL,
+  `nome` VARCHAR(45) NULL,
+  `descricao` VARCHAR(45) NULL,
+  `quant_estoque` INT NULL,
+  `preco` DOUBLE NULL,
+  `data_cadastro` DATE NULL,
+  `tipo` VARCHAR(45) NULL,
+  `regiao` VARCHAR(45) NULL,
+  `marca` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+
+
+Insert:
+INSERT INTO tb_vinho(id,nome,descricao,quant_estoque,preco,data_cadastro,tipo,regiao,marca)VALUES(1,"Terrunyo","Início de comercialização: 2017",56,359.00,'2022-11-01',"Vinho Tinto Cabernet Sauvignon","Chile","Concha y Toro");
+
+Select:
+SELECT * FROM tb_vinho;
+
+Update:
+UPDATE tb_vinho SET nome = "Terrunyo", descricao = "Início de comercialização: 2017", quant_estoque = 52, preco = 359.00, data_cadastro = '2022-11-01', tipo = "Vinho Tinto Cabernet Sauvignon", regiao = "Chile", marca = "Concha y Toro" WHERE id = 1;
+
+Delete:
+DELETE FROM tb_vinho WHERE id = 1;
